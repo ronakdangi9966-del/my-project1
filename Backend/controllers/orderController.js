@@ -1,7 +1,7 @@
 //cash on delivery
 
 
-import orderModel from "../models/orderModel.js";
+import orderModel from "../models/ordermodel.js";
 import userModel from "../models/usermodel.js";
 import Stripe from 'stripe'
 //global variables
