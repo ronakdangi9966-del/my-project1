@@ -1,4 +1,4 @@
-import userModel from "../Modals/usermodel.js";
+import userModel from "../models/usermodel";
 import validator from "validator";
 import jwt from 'jsonwebtoken'
 import bcrypt from "bcrypt";
