@@ -1,10 +1,12 @@
 import express from "express";
+import adminAuth from "../middleware/adminAuth.js";
+import upload from "../middleware/multer.js";
 import {
   addProduct,
   listProduct,
   removeProduct,
   singleProduct,
-} from "../controllers/ProductController.js";
+} from "../controllers/Productcontroller.js";
 
 const router = express.Router();
 
