@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext';
-import Search1 from '../assets/search1.png'
-import Cross from '../assets/cross.png'
+import Search1 from '../assets/Search1.png'
+import Cross from '../assets/Cross.png'
 import { useLocation } from 'react-router-dom';
 
 const Searchbar = () => {

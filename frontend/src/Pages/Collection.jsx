@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Dropdown from '../assets/dropdown.png'
+import Dropdown from '../assets/Dropdown.png'
 import Title from '../Components/Title';
 import Productitem from '../Components/Productitem';
 import { ShopContext } from '../context/ShopContext';
