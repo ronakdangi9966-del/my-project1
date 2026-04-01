@@ -1,8 +1,6 @@
 //cash on delivery
-
-
-import orderModel from "../models/ordermodel.js";
-import userModel from "../models/usermodel.js";
+import orderModel from "../models/orderModel.js"
+import userModel from "../models/userModel.js"
 import Stripe from 'stripe'
 //global variables
 const currency= 'inr'
