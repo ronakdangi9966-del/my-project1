@@ -9,13 +9,14 @@ import { useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 const Navbar = () => {
     const[visible,setVisible]=useState(false)
+    const [profileVisible, setProfileVisible] = useState(false)
     const {setShowSearch,getCartCount,navigate,token,setToken,setCartItem}=useContext(ShopContext);
     const logout=()=>{
       localStorage.removeItem('token')
       navigate('/login')
       setToken('')
       setCartItem({})
-     
+      setProfileVisible(false)
     }
     return (
     <div className="fixed top-2 left-0 right-0 z-50 py-2">
@@ -40,14 +41,14 @@ const Navbar = () => {
       </ul>
       <div className="absolute top-0 right-3 p-4 flex items-center gap-6">
         <img src={Search}  onClick={()=>setShowSearch(true)} alt="Search" className="w-6 h-6 cursor-pointer" />
-        <div className="relative group">
-          <img src={Profile} className="w-6 h-6 cursor-pointer" alt="Profile" />
+        <div className="relative">
+          <img src={Profile} onClick={() => setProfileVisible(!profileVisible)} className="w-6 h-6 cursor-pointer" alt="Profile" />
           {
-            token &&
-            <div className="hidden group-hover:block absolute dropdown-menu right-0 pt-4">
+            token && profileVisible &&
+            <div className="absolute dropdown-menu right-0 pt-4">
             <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100">
               <p className="cursor-pointer hover:text-black">My Profile</p>
-              <p className="cursor-pointer hover:text-black" onClick={()=>navigate('/orders')}>Order</p>
+              <p className="cursor-pointer hover:text-black" onClick={()=>{navigate('/orders'); setProfileVisible(false)}}>Order</p>
               <p className="cursor-pointer hover:text-black" onClick={logout}>Logout</p>
             </div>
           </div>
