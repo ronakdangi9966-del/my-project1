@@ -102,7 +102,7 @@ const Navbar = () => {
 
         <Link to="/cart" className="text-gray-700 hover:text-black relative">
           <img src={Cart} alt="Cart" className="w-8 h-6 sm:w-10 sm:h-8 cursor-pointer" />
-          <p className='absolute left-1/2 -translate-x-1/2 top-[-10px] w-4 h-4 text-center bg-black text-white aspect-square rounded-full text-[9px] flex items-center justify-center'>
+          <p className='absolute left-1/2 -translate-x-1/2 top-[22px] w-4 h-4 text-center bg-black text-white aspect-square rounded-full text-[9px] flex items-center justify-center'>
             {getCartCount()}
           </p>
         </Link>
