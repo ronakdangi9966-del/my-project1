@@ -8,7 +8,7 @@ const About = () => {
       <div className='text-2xl text-center pt-8 border-t mt-20'>
         <Title text1={'ABOUT'} text2={'US'} ></Title>
       </div>
-      <div className='my-10 flex flex-col md:flex-row gap-16'>
+      <div className='my-10 flex flex-col md:flex-row gap-8 md:gap-16'>
         <img className='w-full md:max-w-[450px] ' src={us} alt="" />
       <div className=' flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
       <p>We focus on delivering a smooth shopping experience, fast service, and products that our customers love</p>

@@ -62,7 +62,7 @@ useEffect(()=>{
                 <div>
                   <p className='sm:text-base font-medium'>{item.name}</p>
 
-                  <div className='flex items-center gap-3 mt-2 text-base text-gray-700'>
+                  <div className='flex flex-wrap items-center gap-2 sm:gap-3 mt-2 text-sm sm:text-base text-gray-700'>
                     <p>{currency}{item.price}</p>
                     <p>Quantity: {item.quantity}</p>
                     <p>Size: {item.size}</p>

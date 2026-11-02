@@ -101,10 +101,10 @@ const Placeorder = () => {
 };
 
   return (
-    <form onSubmit={onSubmitHandler}  className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t mt-20'>
+    <form onSubmit={onSubmitHandler}  className='flex flex-col md:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t mt-20'>
       
       {/* Left side */}
-      <div className='flex flex-col gap-4 w-full sm:max-w-[480px] '>
+      <div className='flex flex-col gap-4 w-full md:max-w-[480px] '>
         
         <div className='text-xl sm:text-2xl my-3'></div>
         <Title text1={'DELIVERY'} text2={'INFORMATION'}></Title>
@@ -128,14 +128,14 @@ const Placeorder = () => {
         
       </div>
       {/* Right  Side */}
-      <div className='mt-8'>
-        <div className='mt-8 min-w-80'>
+      <div className='w-full md:w-auto mt-8'>
+        <div className='mt-8 w-full md:min-w-80'>
         <CartTotal></CartTotal>
       </div>
       <div className='mt-12'>
       <Title text1={'PAYMENT'} text2={'METHOD'}></Title>
       {/* Payment Method Selection */}
-      <div className='flex gap-3 flex-col lg:flex-row'>
+      <div className='flex gap-3 flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap'>
       <div onClick={()=>setMethod('stripe')}  className='flex items-center gap-3  border p-2 px-3 cursor-pointer'> 
         <p className={`min-w-3.5  h-3.5 border rounded-full ${method==='stripe' ? 'bg-green-400': ''} `}></p>
       <img src={Stripe} className='h-8 w-20 mx-5' />

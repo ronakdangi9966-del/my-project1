@@ -84,10 +84,10 @@ const Collection = () => {
   }, [sortType])
 
   return (
-    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 mt-20 border-t'>
+    <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 pt-10 mt-20 border-t'>
       
       {/* Filter option */}
-      <div className='min-w-60'>
+      <div className='w-full sm:w-60 sm:shrink-0'>
         <p onClick={() => setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>
           Filters
           <img src={Dropdown} className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} alt="" />
@@ -129,11 +129,11 @@ const Collection = () => {
 
       {/* Right Side */}
       <div className='flex-1'>
-        <div className='flex justify-between text-base sm:text-2xl mb-4'>
+        <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-base sm:text-2xl mb-4'>
           <Title text1="All" text2="Collection" />
 
           <select
-            className='border-2 border-gray-300 text-sm px-2'
+            className='w-full sm:w-auto border-2 border-gray-300 text-sm px-2 py-2'
             onChange={(e) => setSortType(e.target.value)}
           >
             <option value="relevant">Sort by: Relevant</option>

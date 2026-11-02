@@ -4,7 +4,7 @@ import Support1 from '../assets/Support2.png'
 import Support2 from '../assets/Support3.png'
 const Ourpolicy = () => {
   return (
-    <div className='flex flex-col sm:flex-row justify-around gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700'>
+    <div className='flex flex-col sm:flex-row justify-around gap-8 sm:gap-4 text-center py-12 sm:py-20 text-xs sm:text-sm md:text-base text-gray-700'>
       <div>
         <img src={Exchange} alt="Exchange Policy" className='w-20 h-20 object-contain mx-auto' />
         <p className='font-semibold'>easy Exchange Policy</p>
